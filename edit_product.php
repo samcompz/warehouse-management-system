@@ -46,7 +46,6 @@ if(!$product){
        $session->msg("d", $errors);
        redirect('edit_product.php?id='.$product['id'], false);
    }
-
  }
 
 ?>

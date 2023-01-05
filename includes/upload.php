@@ -130,7 +130,7 @@ class  Media {
       $this->errors[] = " Missing user id.";
       return false;
     }
-    $ext = explode(".",$this->fileName);
+    $ext = explode(".", $this->fileName);
     $new_name = randString(8).$id.'.' . end($ext);
     $this->fileName = $new_name;
     if($this->user_image_destroy($id))
@@ -213,9 +213,6 @@ class  Media {
 
    }
 
-
-
 }
-
 
 ?>

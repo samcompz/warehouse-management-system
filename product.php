@@ -1,8 +1,9 @@
+
 <?php
 $page_title = 'All Product';
 require_once('includes/load.php');
 // Checkin What level user has permission to view this page
-page_require_level(2);
+// page_require_level(2);
 $products = join_product_table();
 ?>
 <?php include_once('layouts/header.php'); ?>
@@ -13,19 +14,19 @@ $products = join_product_table();
   <div class="col-md-12">
     <div class="panel panel-default">
       <div class="panel-heading clearfix">
-        <div class="pull-left">
+        <div class="pull-left m-5">
           <input type="text" id="search_product" onkeyup="searchByProduct()" placeholder="Search by product names.." title="Type in a name">
         </div>
-        <div class="pull-left">
+        <div class="pull-left m-15">
           <input type="text" id="search_categorie" onkeyup="searchByCategory()" placeholder="Search by categorie.." title="Type in a name">
         </div>
-        <div class="pull-left">
+        <div class="pull-left m-5">
           <input type="text" id="search_date" onkeyup="searchByDate()" placeholder="Search by date.." title="Type in a name">
         </div>
         <!-- <div class="pull-left">
           <input type="text" id="search_field" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
         </div> -->
-        <div class="pull-right">
+        <div class="pull-right margin-left">
           <a href="add_product.php" class="btn btn-primary">Add New</a>
         </div>
       </div>
@@ -80,7 +81,7 @@ $products = join_product_table();
   </div>
 </div>
 <script>
-  function searchProduct() {
+  function searchByProduct() {
     // Declare variables
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("search_product");
